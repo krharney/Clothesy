@@ -39,6 +39,7 @@ module.exports = ({ questions }) => {
                 qar={"question"}
                 qarId={i.question_id}
                 helpfulnessCounter={i.question_helpfulness}
+                qna={true}
               />
             </Grid>
             <Grid item xs={1}>

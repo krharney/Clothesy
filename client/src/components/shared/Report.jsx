@@ -3,6 +3,7 @@ const { useState } = require("react");
 const { Grid, Typography, Box } = require("@material-ui/core");
 const { makeStyles } = require("@material-ui/styles");
 const axios = require("../../../../helpers/axiosApi.js");
+const qnaaxios = require("../Qna/qnaaxios.js");
 
 const useStyles = makeStyles(theme => ({
   smallGreyFont: {

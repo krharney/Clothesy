@@ -9,7 +9,7 @@ const Singleq = require("./singleq");
 const AddQuestion = require("../shared/Modal");
 const ShowMore = require("../shared/ShowMoreButton");
 const sortCriteria = require("../../../../helpers/sortCriteria");
-const axios = require("../../../../helpers/axiosApi");
+const axios = require("./qnaaxios.js");
 
 //Get data
 const handleGetQuestions = endpoint => {

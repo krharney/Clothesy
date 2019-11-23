@@ -32,10 +32,11 @@ module.exports = ({ answerid, date, answerername, helpfulcount }) => {
             qar={"answer"}
             qarId={answerid}
             helpfulnessCounter={helpfulcount}
+            qna={true}
           />
         </Grid>
         <Grid item xs={2}>
-          <Report />
+          <Report qna={true}/>
         </Grid>
       </Grid>
     </div>

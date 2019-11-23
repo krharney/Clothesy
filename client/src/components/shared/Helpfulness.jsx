@@ -3,6 +3,7 @@ const { useState } = require("react");
 const { Typography, Grid } = require("@material-ui/core");
 const { makeStyles } = require("@material-ui/core");
 const axios = require("../../../../helpers/axiosApi.js");
+const qnaaxios = require("../Qna/qnaaxios.js");
 
 const useStyles = makeStyles(theme => ({
   smallGreyFont: {
@@ -17,8 +18,8 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const markAsHelpful = {
-  question: id => axios.put(`/qa/question/${id}/helpful`),
-  answer: id => axios.put(`/qa/answer/${id}/helpful`),
+  question: id => qnaaxios.put(`/qa/question/${id}/helpful`),
+  answer: id => qnaaxios.put(`/qa/answer/${id}/helpful`),
   review: id => axios.put(`/reviews/helpful/${id}`)
 };
 
@@ -53,7 +54,7 @@ module.exports = ({
               .then(() => onSuccess())
               .catch(() => {
                 onFail();
-                setHctr(hctr -1);
+                setHctr(hctr - 1);
               });
           }}
         >
